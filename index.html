@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orcamento MVP Exchange Pro</title>
-  <meta name="description" content="MVP Exchange Pro: proposta de desenvolvimento, escopo e orçamento." />
+  <title>Exchange Pro</title>
+  <meta name="description" content="MVP Exchange Pro: proposta tecnica e escopo operacional." />
   <meta name="theme-color" content="#0a0f1e" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Orcamento MVP Exchange Pro" />
-  <meta property="og:description" content="Proposta técnica com escopo, áreas e orçamento do MVP Exchange Pro." />
+  <meta property="og:title" content="Exchange Pro" />
+  <meta property="og:description" content="Exchange Pro com escopo tecnico, areas funcionais e estrutura operacional do MVP." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=1200&h=630&q=80" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Orcamento MVP Exchange Pro" />
-  <meta name="twitter:description" content="Proposta técnica com escopo, áreas e orçamento do MVP Exchange Pro." />
+  <meta name="twitter:title" content="Exchange Pro" />
+  <meta name="twitter:description" content="Exchange Pro com escopo tecnico, areas funcionais e estrutura operacional do MVP." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=1200&h=630&q=80" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306b6d4'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='28' font-family='Arial' font-weight='700' fill='white'%3EDP%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1070,7 +1070,7 @@
         footer: ""
       },
       highlights: {
-        title: "Upgrade sugerido sin incrementar el presupuesto",
+        title: "Mejoras incluidas para una experiencia mas completa",
         items: [
           { head: "Graficas crypto pro", body: "Velas, volumen y panel de mercado en tiempo real con libreria especializada." },
           { head: "Custodia hot + cold wallet", body: "Retiros por lotes con aprobacion manual/multifirma para reducir riesgo." },
@@ -1082,7 +1082,7 @@
       },
       showcase: {
         title: "Percepcion visual nivel producto real",
-        subtitle: "Este bloque eleva la imagen del presupuesto: demuestra mercado en vivo, enfoque de seguridad y experiencia comercial.",
+        subtitle: "Este bloque refleja Exchange Pro: mercado en vivo, enfoque de seguridad y experiencia comercial.",
         tickers: ["BTC/USDT +2.41%", "ETH/USDT +1.37%", "SOL/USDT +3.05%", "BNB/USDT +0.86%", "XRP/USDT +1.12%"],
         cards: [
           { title: "Market Experience", body: "Panel de mercado con graficas de velas, volumen y movimientos en vivo para web y app." },
@@ -1090,7 +1090,7 @@
           { title: "Operacion Confiable", body: "Alertas, monitoreo y respuesta temprana para nodos, wallets y servicios criticos." }
         ]
       },
-      table: { area: "Area", scope: "Que incluye detalladamente", budget: "Presupuesto" },
+      table: { area: "Area", scope: "Que incluye detalladamente", budget: "Info" },
       items: [
         { area: "Backend principal", scope: "Desarrollo del nucleo transaccional y administrativo de la exchange: API principal, autenticacion segura, gestion de usuarios y perfiles, balances internos por activo, historial de movimientos, integracion con wallets hot, solicitudes y control de depositos/retiros, estados transaccionales, bitacora inicial de operaciones y panel administrativo basico. Tambien contempla funciones tipicas que una exchange necesita desde el arranque, como gestion de cuentas, conciliacion operativa inicial, consulta de saldos, trazabilidad de transacciones, reglas basicas para aprobacion o revision de retiros y estructura base para modulo P2P o intercambio interno inicial. Preparado para integrarse con frontend web, apps moviles y servicios blockchain. Incluye canal WebSocket para precios/ordenes en tiempo real y estructura para agregacion de velas (OHLC).", budget: "$6,000 USD" },
         { area: "Frontend web", scope: "Desarrollo del panel web para usuarios y administracion: dashboard principal, visualizacion de mercado, balances, historial, ordenes, depositos, retiros, perfil, alertas visuales, formularios operativos y panel administrativo basico. Se refuerzan funciones que una exchange debe mostrar con claridad, como resumen de cuenta, historial de operaciones, estado de depositos y retiros, consulta de precios o mercado, seguimiento de ordenes y acceso a seguridad de cuenta. Incluye diseno responsive para desktop y movil, estructura clara de navegacion y una base profesional para operar comercialmente desde navegador. Tambien integra modulo de graficas crypto (velas, volumen y tendencias) para lectura de mercado en tiempo real.", budget: "$3,000 USD" },
@@ -1104,7 +1104,7 @@
         { area: "QA basico", scope: "Pruebas funcionales generales del MVP en web y movil: login, registro, depositos, retiros, balances, historial, flujo de panel, validaciones basicas, revision de errores visibles y chequeo operativo de los modulos principales. Se revisan especialmente funciones que son clave en una exchange: acceso de usuario, lectura correcta de saldos, consistencia del historial, solicitud de retiros, visualizacion del mercado y estabilidad de las pantallas principales.", budget: "$1,200 USD" },
         { area: "DevOps y despliegue", scope: "Configuracion de produccion y salida en vivo: deploy de frontend y backend, variables de entorno, configuracion de servicios, certificados SSL, estructura inicial de logs, backups, reinicio de procesos, organizacion del entorno productivo y puesta en linea del sistema bajo dominio real. Esta partida aterriza todo lo tecnico que una exchange necesita para publicarse: servidor funcionando, dominio conectado, HTTPS activo, servicios levantados, configuracion segura de entorno y estructura basica para mantenimiento posterior. Incluye alertas operativas para caidas de nodos/wallets y eventos criticos.", budget: "$1,000 USD" },
         { area: "Publicacion tiendas", scope: "Preparacion para Google Play Console y Apple Developer: configuracion inicial, empaquetado, compilaciones base, assets minimos y apoyo tecnico para dejar listas las apps para publicacion. Esto permite que las funciones moviles de la exchange queden listas para distribuirse a usuarios finales mediante tiendas oficiales.", budget: "$300 USD" },
-        { area: "Soporte operativo inicial", scope: "Fondo operativo minimo para incidencias, ajustes tempranos, correcciones menores post-lanzamiento, revision de errores iniciales y acompanamiento tecnico en el arranque comercial del producto. Sirve para estabilizar funciones sensibles de la exchange durante sus primeros dias o semanas de uso real, sin modificar el alcance ni el presupuesto base del MVP.", budget: "$1,500 USD" }
+        { area: "Soporte operativo inicial", scope: "Fondo operativo minimo para incidencias, ajustes tempranos, correcciones menores post-lanzamiento, revision de errores iniciales y acompanamiento tecnico en el arranque comercial del producto. Sirve para estabilizar funciones sensibles de la exchange durante sus primeros dias o semanas de uso real, sin modificar el alcance base del MVP.", budget: "$1,500 USD" }
       ]
     };
 
@@ -1121,7 +1121,7 @@
         },
         doc: { title: "Crypto Exchange Platform", subtitle: "Technical specification of an operational exchange MVP" },
         highlights: {
-          title: "Suggested upgrade with the same budget",
+          title: "Included enhancements for a stronger product experience",
           items: [
             { head: "Pro crypto charts", body: "Candles, volume, and real-time market panel with a specialized chart library." },
             { head: "Hot + cold wallet custody", body: "Batch withdrawals with manual/multisig approval to reduce risk." },
@@ -1141,7 +1141,7 @@
             { title: "Reliable Operations", body: "Monitoring and alerting for nodes, wallets, and critical services with response routines." }
           ]
         },
-        table: { area: "Area", scope: "Detailed scope", budget: "Budget" },
+        table: { area: "Area", scope: "Detailed scope", budget: "Info" },
         areas: {
           "Backend principal": "Core backend",
           "Frontend web": "Web frontend",
@@ -1174,7 +1174,7 @@
           intro: "Documento tecnico do escopo funcional e arquitetura base do MVP: modulos core, seguranca de acesso, custodia de ativos, integracao blockchain, observabilidade e operacao em producao."
         },
         highlights: {
-          title: "Upgrade sugerido sem aumentar o orcamento",
+          title: "Algunas caracterisicas",
           items: [
             { head: "Graficos crypto pro", body: "Velas, volume e painel de mercado em tempo real com biblioteca especializada." },
             { head: "Custodia hot + cold wallet", body: "Saques em lote com aprovacao manual/multisig para reduzir risco." },
@@ -1194,7 +1194,7 @@
             { title: "Operacao Confiavel", body: "Monitoramento e alertas para nos, wallets e servicos criticos com rotina de resposta." }
           ]
         },
-        table: { area: "Area", scope: "Escopo detalhado", budget: "Orcamento" },
+        table: { area: "Area", scope: "Escopo detalhado", budget: "Info" },
         scopes: [
           "Desenvolvimento do nucleo transacional e administrativo da exchange: API principal, autenticacao segura, gerenciamento de usuarios e perfis, saldos internos por ativo, historico de movimentacao, integracao com hot wallets, solicitacoes e controle de depositos/saques, estados transacionais, log de operacoes iniciais e painel administrativo basico. Inclui tambem funcoes tipicas que uma exchange necessita desde o inicio, como gerenciamento de contas, conciliacao operacional inicial, consulta de saldo, rastreabilidade de transacoes, regras basicas para aprovacao ou revisao de saques e estrutura base para modulo P2P ou exchange interna inicial. Preparado para integracao com frontend web, aplicativos moveis e servicos blockchain. Inclui canal WebSocket para precos/pedidos em tempo real e estrutura para agregacao de velas (OHLC).",
           "Desenvolvimento do painel web para usuarios e administracao: dashboard principal, visualizacao de mercado, saldos, historico, pedidos, depositos, saques, perfil, alertas visuais, formularios operacionais e painel administrativo basico. Sao reforcadas funcoes que uma exchange deve exibir claramente, como resumo da conta, historico de transacoes, status de depositos e saques, consulta de preco ou mercado, rastreamento de ordens e acesso a seguranca da conta. Inclui um design responsivo para desktop e dispositivos moveis, uma estrutura de navegacao clara e uma base profissional para operar comercialmente a partir de um navegador. Tambem integra um modulo criptografico (velas, volume e tendencias) para leitura do mercado em tempo real.",
@@ -1208,7 +1208,7 @@
           "Testes funcionais gerais do MVP em web e mobile: login, cadastro, depositos, saques, saldos, historico, fluxo do painel, validacoes basicas, revisao de erros visiveis e verificacao operacional dos modulos principais. Sao especialmente revisadas funcoes fundamentais em uma exchange: acesso do usuario, leitura correta dos saldos, consistencia do historico, solicitacoes de saque, visualizacao do mercado e estabilidade das telas principais.",
           "Configuracao de producao e saida em vivo: deploy de frontend e backend, variaveis de ambiente, configuracao de servicos, certificados SSL, estrutura inicial de logs, backups, reinicio de processos, organizacao do ambiente produtivo e publicacao do sistema em dominio real. Esta partida cobre tudo o que uma exchange precisa para ser publicada: servidor funcionando, dominio conectado, HTTPS ativo, servicos operando, configuracao segura de ambiente e estrutura basica para manutencao posterior. Inclui alertas operacionais para quedas de nos/wallets e eventos criticos.",
           "Preparacao para Google Play Console e Apple Developer: configuracao inicial, empacotamento, compilacoes base, assets minimos e apoio tecnico para deixar os apps prontos para publicacao. Isso permite que as funcoes moveis da exchange fiquem prontas para distribuicao aos usuarios finais por meio das lojas oficiais.",
-          "Fundo operacional minimo para incidentes, ajustes iniciais, correcoes menores pos-lancamento, revisao de erros iniciais e acompanhamento tecnico no arranque comercial do produto. Serve para estabilizar funcoes sensiveis da exchange durante os primeiros dias ou semanas de uso real, sem modificar o escopo ou o orcamento base do MVP."
+          "Fundo operacional minimo para incidentes, ajustes iniciais, correcoes menores pos-lancamento, revisao de erros iniciais e acompanhamento tecnico no arranque comercial do produto. Serve para estabilizar funcoes sensiveis da exchange durante os primeiros dias ou semanas de uso real, sem modificar o escopo base do MVP."
         ],
         areas: {
           "Backend principal": "Backend principal",
@@ -1490,7 +1490,7 @@
       }
 
       const nameMap = { es: "espanol", en: "english", pt: "portugues" };
-      doc.save(`presupuesto_mvp_${nameMap[state.lang]}.pdf`);
+      doc.save(`exchange_pro_mvp_${nameMap[state.lang]}.pdf`);
     }
 
     document.querySelectorAll(".lang-btn").forEach((btn) => {
