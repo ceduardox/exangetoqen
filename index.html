@@ -270,6 +270,22 @@
       background: transparent;
       border-radius: 999px;
       padding: 10px 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang-flag {
+      width: 18px;
+      height: 13px;
+      object-fit: cover;
+      border-radius: 2px;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
+    }
+
+    :root[data-theme="light"] .lang-flag {
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.16);
     }
 
     .lang-btn:hover {
@@ -884,13 +900,15 @@
 
     tbody td:last-child {
       width: 140px;
-      text-align: right;
+      text-align: center;
       white-space: nowrap;
       font-family: "Space Grotesk", sans-serif;
-      font-weight: 700;
-      color: var(--accent-emerald);
-      font-size: 1.05rem;
-      text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-shadow: none;
     }
 
     .footer-note {
@@ -962,9 +980,18 @@
         <span class="brand-badge">MVP</span>
         <span class="toolbar-label" id="languageLabel">Idioma</span>
         <div class="lang-buttons" role="group" aria-label="Selecao de idioma">
-          <button type="button" class="lang-btn" data-lang="es">ES</button>
-          <button type="button" class="lang-btn" data-lang="en">EN</button>
-          <button type="button" class="lang-btn active" data-lang="pt">PT</button>
+          <button type="button" class="lang-btn" data-lang="es">
+            <img class="lang-flag" src="https://flagcdn.com/w40/es.png" alt="Bandeira da Espanha" loading="lazy" decoding="async" />
+            <span>ES</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="en">
+            <img class="lang-flag" src="https://flagcdn.com/w40/us.png" alt="Bandeira dos Estados Unidos" loading="lazy" decoding="async" />
+            <span>EN</span>
+          </button>
+          <button type="button" class="lang-btn active" data-lang="pt">
+            <img class="lang-flag" src="https://flagcdn.com/w40/br.png" alt="Bandeira do Brasil" loading="lazy" decoding="async" />
+            <span>PT</span>
+          </button>
         </div>
       </div>
       <div class="toolbar-actions">
@@ -1216,6 +1243,11 @@
     };
 
     const THEME_STORAGE_KEY = "exchange_theme_preference";
+    const BUDGET_MASK = { es: "Oculto", en: "Hidden", pt: "Oculto" };
+
+    function getBudgetMask(lang) {
+      return BUDGET_MASK[lang] || BUDGET_MASK.en;
+    }
 
     function getPreferredTheme() {
       const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
@@ -1290,11 +1322,12 @@
       refs.thBudget.textContent = pack.table.budget;
 
       refs.rows.innerHTML = "";
+      const maskedBudget = getBudgetMask(state.lang);
       pack.items.forEach((item) => {
         const tr = document.createElement("tr");
         const tdArea = document.createElement("td"); tdArea.textContent = item.area;
         const tdScope = document.createElement("td"); tdScope.textContent = item.scope;
-        const tdBudget = document.createElement("td"); tdBudget.textContent = item.budget;
+        const tdBudget = document.createElement("td"); tdBudget.textContent = maskedBudget;
         tr.append(tdArea, tdScope, tdBudget);
         refs.rows.appendChild(tr);
       });
@@ -1417,7 +1450,8 @@
       }
 
       const doc = new jsPdfLib({ orientation: "landscape", unit: "pt", format: "a4" });
-      const rows = pack.items.map((item) => [item.area, item.scope, item.budget]);
+      const maskedBudget = getBudgetMask(state.lang);
+      const rows = pack.items.map((item) => [item.area, item.scope, maskedBudget]);
 
       doc.setFont("helvetica", "bold");
       doc.setFontSize(16);
@@ -1437,7 +1471,7 @@
           theme: "grid",
           styles: { fontSize: 8, cellPadding: 5, overflow: "linebreak", textColor: [26, 54, 66], valign: "top" },
           headStyles: { fillColor: [11, 122, 152], textColor: [255, 255, 255], fontStyle: "bold" },
-          columnStyles: { 0: { cellWidth: 130 }, 1: { cellWidth: 510 }, 2: { cellWidth: 88, halign: "right" } }
+          columnStyles: { 0: { cellWidth: 130 }, 1: { cellWidth: 510 }, 2: { cellWidth: 88, halign: "center" } }
         });
         const finalY = doc.lastAutoTable && doc.lastAutoTable.finalY ? doc.lastAutoTable.finalY : 92;
         doc.setFontSize(8);
