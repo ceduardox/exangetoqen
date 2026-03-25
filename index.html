@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -962,9 +962,9 @@
         <span class="brand-badge">MVP</span>
         <span class="toolbar-label" id="languageLabel">Idioma</span>
         <div class="lang-buttons" role="group" aria-label="Seleccion de idioma">
-          <button type="button" class="lang-btn active" data-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
           <button type="button" class="lang-btn" data-lang="en">EN</button>
-          <button type="button" class="lang-btn" data-lang="pt">PT</button>
+          <button type="button" class="lang-btn active" data-lang="pt">PT</button>
         </div>
       </div>
       <div class="toolbar-actions">
@@ -1171,8 +1171,8 @@
       }
     };
 
-    const cache = { es: structuredClone(BASE) };
-    const state = { lang: "es", pack: cache.es, busy: false, requestId: 0, theme: "dark" };
+    const cache = { es: structuredClone(BASE), pt: cloneManualPack("pt") };
+    const state = { lang: "pt", pack: cache.pt, busy: false, requestId: 0, theme: "dark" };
 
     const refs = {
       languageLabel: document.getElementById("languageLabel"),
